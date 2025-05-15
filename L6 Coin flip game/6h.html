@@ -3,12 +3,13 @@
   <head></head>
   <body>
     <script>
-        const result = '';
       const randomNumber = Math.random();
-      if (randomNumber >= 0.5){
-        console.log('Heads');
-      }else {
-        console.log('Tails')
+      let result;
+
+      if (randomNumber < 0.5) {
+        result = 'heads';
+      } else {
+        result = 'tails';
       }
     </script>
   </body>

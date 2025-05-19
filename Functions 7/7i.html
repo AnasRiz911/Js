@@ -31,8 +31,6 @@
         } else if (from === 'ft' && to === 'miles') {
           return `${length / 5280} ${to}`;
 
-        // You can also do if (from === 'km' && to === 'km) { ... }
-        // if (from === to) is a trick you can use to save some code.
         } else if (from === to) {
           return `${length} ${to}`;
         }

@@ -6,14 +6,13 @@
     <title>Functions</title>
 </head>
 <body>
+    
     hello world
     <script>
-      function greet (){
-     console.log('Hello!')    
-    }
-        greet ();
-        greet ();
-        greet ();
+      function convertToCelsius(fahrenheit){
+        console.log(`${Math.round((fahrenheit-32)*5/9)}°C`)
+      }
+      convertToCelsius(`86`);
 
     </script>
 </body>

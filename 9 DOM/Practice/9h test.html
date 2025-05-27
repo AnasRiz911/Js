@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>KeyUp Example</title>
+</head>
+<body>
+  <input type="text" id="textInput" placeholder="Type something..." />
+
+  <script>
+    const input = document.getElementById("textInput");
+
+    input.addEventListener("keyup", function(event) {
+      console.log("Key released:", event.key);        // Logs the key as a string
+      console.log("Type of event.key:", typeof event.key); // Always "string"
+    });
+  </script>
+</body>
+</html>

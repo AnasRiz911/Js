@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM Exercises</title>
+    <style>
+      body {
+        padding-bottom: 110px;
+      }
+
+      .title {
+        margin-top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>YouTube Subscribe Button</p>
+
+    <button class="js-subscribe-button"
+      onclick="subscribe()">
+      Subscribe
+    </button>
+
+    <p class="title">Rock Paper Scissors</p>
+    <a href="https://supersimple.dev/projects/dom-rock-paper-scissors">
+      Click here
+    </a>
+
+    <p class="title">Amazon Shipping Calculator</p>
+    <p>
+      Orders under $40 = +$10 shipping.<br>
+    </p>
+    <p>
+      Orders over $40 = FREE shipping.
+    </p>
+    <p>
+      <input placeholder="Cost of order"
+        class="js-cost-input"
+        onkeydown="handleCostInputKeydown(event)">
+      <button class="js-calculate-button"
+        onclick="calculateTotal()">
+        Calculate
+      </button>
+    </p>
+    <p class="js-total-cost"></p>
+
+    <p class="title">
+      <a href="https://supersimple.dev/projects/dom-with-css">
+        CSS version of these projects
+      </a>
+    </p>
+
+    <script>
+      function subscribe() {
+        const subscribeButton = document.querySelector('.js-subscribe-button');
+
+        if (subscribeButton.innerHTML === 'Subscribed') {
+          subscribeButton.innerHTML = 'Subscribe';
+
+        } else {
+          subscribeButton.innerHTML = 'Subscribed';
+        }
+      }
+
+      function calculateTotal() {
+        const inputElement = document.querySelector('.js-cost-input');
+        let cost = Number(inputElement.value) * 100;
+
+        if (cost < 4000) {
+          cost = cost + 1000;
+        }
+
+        document.querySelector('.js-total-cost')
+          .innerHTML = `$${cost / 100}`;
+      }
+
+      function handleCostInputKeydown(event) {
+        const key = event.key;
+
+        if (key === 'Enter') {
+          calculateTotal();
+        } else if (key === 'Escape') {
+          document.querySelector('.js-cost-input').value = '';
+        }
+      }
+    </script>
+  </body>
+</html>

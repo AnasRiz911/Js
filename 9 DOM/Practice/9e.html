@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <input class="js-input" onkeydown="inputEnter()">
+    <button onclick="calculateTotal();">Submit</button>
+    <p class="js-output"></p>
+    <script>
+        function inputEnter (){
+     if(event.key === 'Enter'){
+        calculateTotal();
+     }
+        }
+        function calculateTotal (){
+            const inputElement = document.querySelector('.js-input');
+            let cost = (inputElement.value);
+            document.querySelector('.js-output')
+            .innerHTML = `Your name is ${cost}`
+        }
+    </script>
+</body>
+</html>

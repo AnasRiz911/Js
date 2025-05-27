@@ -1,0 +1,40 @@
+body{
+    background-color: #191919;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 30px ;
+
+}
+.title{
+    /* background-color:red; */
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+
+}
+.rock-button, .paper-button, .scissor-button, .rock-result, .paper-result{
+    background-color: #ffffff00;
+    border: none;
+    border: 1px solid white;
+    border-radius: 100%;
+    padding: 30px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.js-result, .js-moves, .js-score{
+    color: white;
+    margin: 50px 0px 10px 0px;
+
+}
+.js-result{
+    font-size: 25px;
+}
+.reset-button{
+    background-color: red;
+    padding: 15px 20px 15px 20px;
+    color: white;
+    border: none;
+    font-size: 16px;
+    border-radius: 8px;
+    margin-top: 20px;
+}

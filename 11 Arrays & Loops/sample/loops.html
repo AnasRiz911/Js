@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Loop Demo</title>
+</head>
+<body>
+    <h2>Finite Loop Output:</h2>
+    <div id="finite-output"></div>
+
+    <h2>Simulated Infinite Loop Output:</h2>
+    <div id="infinite-output"></div>
+
+    <script>
+        // Finite loop
+        let i = 1;
+        const finiteDiv = document.getElementById('finite-output');
+        while (i <= 2) {
+            const p = document.createElement('p');
+            p.textContent = 'i = ' + i;
+            finiteDiv.appendChild(p);
+            i = i + 1;
+        }
+
+        // Simulated Infinite Loop — runs 5 times only (to avoid crash)
+        let j = 1;
+        let runCount = 0;
+        const infiniteDiv = document.getElementById('infinite-output');
+        while (j <= 2) {
+            const p = document.createElement('p');
+            p.textContent = 'j = ' + j + ' (simulating infinite)';
+            infiniteDiv.appendChild(p);
+            
+            // Exit manually after 5 times to simulate "infinite" behavior
+            runCount++;
+            if (runCount >= 5) {
+                const warning = document.createElement('p');
+                warning.style.color = 'red';
+                warning.textContent = 'Loop manually stopped after 5 iterations to simulate an infinite loop.';
+                infiniteDiv.appendChild(warning);
+                break;
+            }
+
+            // Simulate missing increment
+            // j = j + 1;  <-- This is intentionally left out
+        }
+    </script>
+</body>
+</html>

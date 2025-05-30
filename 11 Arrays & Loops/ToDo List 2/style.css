@@ -1,6 +1,5 @@
 body {
-  font-family: Arial;
-  
+  font-family: Arial; 
 }
 .p-title{
   font-size: 22px;
@@ -11,7 +10,6 @@ body {
   border-radius: 8px;
   border: 1px solid black ;
 }
-
 .todo-grid,
 .todo-input-grid {
   display: grid;
@@ -20,15 +18,11 @@ body {
   row-gap: 10px;
   align-items: center;
   text-align: center;
-  /* background-color: red; */
-  /* padding: 20px; */
 }
-
 .todo-input-grid {
   margin-bottom: 10px;
   align-items: stretch;
 }
-
 .name-input,
 .due-date-input {
   font-size: 15px;
@@ -36,7 +30,6 @@ body {
   text-align: center;
   padding: 6px;
 }
-
 .add-todo-button {
   background-color: green;
   border-radius: 10px;
@@ -45,7 +38,6 @@ body {
   font-size: 15px;
   cursor: pointer;
 }
-
 .delete-todo-button {
   background-color: darkred;
   border-radius: 10px ;
@@ -57,16 +49,13 @@ body {
   padding-bottom: 10px;
   text-align: center;
 }
-
 .todo-list-name{
-  /* background-color: red; */
   padding: 6px;
   border: 1px solid black;
   border-radius: 8px;
   background-color: beige;
   color: black;
 }
-
 .todo-list-duedate{
   padding: 6px;
   color: black;
